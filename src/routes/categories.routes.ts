@@ -9,6 +9,8 @@ const upload = multer({
     dest: "./tmp",
 });
 
+console.log("")
+
 const categoriesRoute = Router();
 
 categoriesRoute.post("/", (request, response) => {

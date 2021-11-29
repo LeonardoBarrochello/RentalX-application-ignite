@@ -16,5 +16,6 @@ class CreateSpecificationController {
         return response.status(201).send();
     }
 }
+console.log("");
 
 export { CreateSpecificationController };

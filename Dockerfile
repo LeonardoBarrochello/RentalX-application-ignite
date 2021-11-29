@@ -1,6 +1,6 @@
-FROM node 
+FROM node:latest
 
-WORKDIR /user/app
+WORKDIR /usr/app
 
 COPY package.json ./   
 
@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 3333
 
-CMD ["npm", "run" , "dev"]
+CMD ["npm","run","dev"]
