@@ -21,9 +21,9 @@ services:
         volumes:
             - .:/usr/app
         links:
-            - database
+            - database_ignite
         depends_on: 
-            - database
+            - database_ignite
         
 
 volumes:

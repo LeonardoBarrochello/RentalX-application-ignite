@@ -3,3 +3,4 @@ node_modules/
 .editorconfig
 .eslintignore
 .eslintrc.json
+tmp/
