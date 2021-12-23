@@ -6,7 +6,6 @@ import { ICategoriesRepository } from "../../repositories/ICategoriesRepository"
 
 interface IImportCategory {
     name: string;
-
     description: string;
 }
 
