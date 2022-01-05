@@ -29,6 +29,7 @@ class CarsRepository implements ICarsRepository {
             category_id,
         });
         await this.repository.save(car);
+
         return car;
     }
 

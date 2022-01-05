@@ -1,3 +1,4 @@
+import { Category } from "@modules/cars/infra/typeorm/entities/Category";
 import { ICategoriesRepository } from "@modules/cars/repositories/ICategoriesRepository";
 import { inject, injectable } from "tsyringe";
 
@@ -38,7 +39,10 @@ class CreateCategoryUseCase {
             throw new AppError("Category already exists");
         }
 
-        this.categoriesRepository.create({ name, description });
+        await this.categoriesRepository.create({
+            name,
+            description,
+        });
     }
 }
 
