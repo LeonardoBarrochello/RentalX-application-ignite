@@ -42,7 +42,7 @@ describe("Create Category Controller", () => {
         expect(response.status).toBe(201);
     });
 
-    it("Should be able to create a category with name exists", async () => {
+    it("Should not be able to create a category with name exists", async () => {
         const responseToken = await request(app).post("/sessions").send({
             email: "admin@rentx.com.br",
             password: "admin",

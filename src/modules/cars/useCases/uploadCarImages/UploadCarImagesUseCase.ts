@@ -18,10 +18,7 @@ class UploadCarImagesUseCase {
     async execute({ car_id, images_name }: IRequest): Promise<void> {
         images_name.map(async (image) => {
             await this.carImagesRepository.create(car_id, image);
-            await deleteFile(`./tmp/cars/${image}`);
         });
-
-        // fazer delete de imagens separado;
     }
 }
 

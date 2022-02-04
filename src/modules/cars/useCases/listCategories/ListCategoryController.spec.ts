@@ -7,7 +7,7 @@ import { app } from "@shared/infra/http/app";
 import createConnection from "@shared/infra/typeorm";
 
 let connection: Connection;
-describe("Create Category Controller", () => {
+describe("List Category Controller", () => {
     beforeAll(async () => {
         connection = await createConnection();
         await connection.runMigrations();
@@ -40,8 +40,6 @@ describe("Create Category Controller", () => {
             });
 
         const response = await request(app).get("/categories");
-
-        console.log(response);
 
         expect(response.status).toBe(200);
         expect(response.body.length).toBe(1);

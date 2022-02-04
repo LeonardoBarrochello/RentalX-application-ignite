@@ -26,24 +26,23 @@ describe("Create Category", () => {
             category.name
         );
 
-        console.log(categoryCreated);
         expect(categoryCreated).toHaveProperty("id");
     });
     it("Should be able to create a new category", async () => {
-        expect(async () => {
-            const category = {
-                name: "Category name Test",
-                description: "Category description Test",
-            };
+        const category = {
+            name: "Category name Test",
+            description: "Category description Test",
+        };
 
-            await createCategoryUseCase.execute({
+        await createCategoryUseCase.execute({
+            name: category.name,
+            description: category.description,
+        });
+        await expect(
+            createCategoryUseCase.execute({
                 name: category.name,
                 description: category.description,
-            });
-            await createCategoryUseCase.execute({
-                name: category.name,
-                description: category.description,
-            });
-        }).rejects.toBeInstanceOf(AppError);
+            })
+        ).rejects.toEqual(new AppError("Category already exists"));
     });
 });

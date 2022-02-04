@@ -1,4 +1,3 @@
-import { Category } from "@modules/cars/infra/typeorm/entities/Category";
 import { ICategoriesRepository } from "@modules/cars/repositories/ICategoriesRepository";
 import { inject, injectable } from "tsyringe";
 
@@ -9,18 +8,6 @@ interface IRequest {
 
     description: string;
 }
-
-/**
-
- *   [x] - Definir tipo de retorno
-
- *   [x] - Alterar retorno de erro
-
- *   [x] - Acessar o repositório
-
- *   [x] - Retornar algo
-
- */
 
 @injectable()
 class CreateCategoryUseCase {
@@ -34,7 +21,6 @@ class CreateCategoryUseCase {
             name
         );
 
-        console.log(checkCategoryExists);
         if (checkCategoryExists) {
             throw new AppError("Category already exists");
         }
