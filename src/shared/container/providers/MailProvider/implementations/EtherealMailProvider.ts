@@ -33,11 +33,11 @@ class EtherealMailProvider implements IMailProvider {
         variables: any,
         path: string
     ): Promise<void> {
-        const templateFileContent = fs.readFileSync(path).toString("utf8");
+        const templateFileContent = fs.readFileSync(path).toString("utf8"); // le o arquivo resultante do path passado como parametro
 
-        const templateParse = handlebars.compile(templateFileContent);
+        const templateParse = handlebars.compile(templateFileContent); // passa o conteudo do arquivo pro parse do template engine
 
-        const templateHTML = templateParse(variables);
+        const templateHTML = templateParse(variables); // passa as variaveis para o parse para substituir
 
         const mailOptions = {
             to,
