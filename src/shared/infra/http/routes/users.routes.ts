@@ -6,7 +6,7 @@ import multer from "multer";
 
 import { ensureAuthenticated } from "@shared/infra/http/middlewares/ensureAuthenticated";
 
-const uploadAvatar = multer(uploadConfig.upload("./tmp/avatar"));
+const uploadAvatar = multer(uploadConfig);
 const createUserController = new CreateUserController();
 const updateUserAvatarController = new UpdateUserAvatarController();
 const usersRoutes = Router();

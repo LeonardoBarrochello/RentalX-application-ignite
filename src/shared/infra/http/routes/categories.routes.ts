@@ -1,4 +1,4 @@
-import uploadCategory from "@config/upload";
+import uploadConfig from "@config/upload";
 import { CreateCategoryController } from "@modules/cars/useCases/createCategory/CreateCategoryController";
 import { ImportCategoryController } from "@modules/cars/useCases/importCategory/ImportCategoryController";
 import { ListCategoryController } from "@modules/cars/useCases/listCategories/ListCategoryController";
@@ -8,7 +8,7 @@ import multer from "multer";
 import { ensureAdmin } from "../middlewares/ensureAdmin";
 import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 
-const uploadCategories = multer(uploadCategory.upload("./tmp"));
+const uploadCategories = multer(uploadConfig);
 
 const categoriesRoutes = Router();
 
