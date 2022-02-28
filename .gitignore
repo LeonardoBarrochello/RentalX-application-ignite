@@ -2,5 +2,6 @@ node_modules/
 .vscode/
 .editorconfig
 .eslintignore
+.env
 .eslintrc.json
 tmp/
