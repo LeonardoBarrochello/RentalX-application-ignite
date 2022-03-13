@@ -1,7 +1,8 @@
 node_modules/
 .vscode/
-.editorconfig
-.eslintignore
 .env
-.eslintrc.json
-tmp/
+coverage
+tmp/*
+dist/
+!tmp/.gitkeep
+ormconfig.json
