@@ -12,11 +12,13 @@ import { router } from "@shared/infra/http/routes";
 
 import swaggerDocument from "../../../swagger.json";
 import createConnection from "../typeorm/index";
+import rateLimiterMiddleware from "./middlewares/rateLimiter";
 
 createConnection();
 const app = express();
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use(express.json());
+app.use(rateLimiterMiddleware);
 app.use("/avatar", express.static(`${upload.tmpFolder}/avatar`));
 app.use("/cars", express.static(`${upload.tmpFolder}/cars`));
 app.use(router);
