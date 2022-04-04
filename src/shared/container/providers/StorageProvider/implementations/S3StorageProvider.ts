@@ -4,6 +4,8 @@ import fs from "fs";
 import mime from "mime";
 import { resolve } from "path";
 
+import { IStorageProvider } from "../IStorageProvider";
+
 class S3StorageProvider implements IStorageProvider {
     private client: S3;
 

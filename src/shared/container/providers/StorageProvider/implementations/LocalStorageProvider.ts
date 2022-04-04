@@ -3,6 +3,8 @@ import fs from "fs";
 import { resolve } from "path";
 import { injectable } from "tsyringe";
 
+import { IStorageProvider } from "../IStorageProvider";
+
 @injectable()
 class LocalStorageProvider implements IStorageProvider {
     async save(file: string, folder: string): Promise<string> {
