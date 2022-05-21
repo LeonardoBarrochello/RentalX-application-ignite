@@ -4,7 +4,7 @@ Esta é uma aplicação de aluguel de carros desenvolvida durante o bootcamp ign
 
 
 # Funcionalidades
-- Autenticação JWT 
+- Autenticação de usuário 
 - Envio de email para reset de senha
 - upload de imagens e avatar
 - alugar carros
