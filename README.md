@@ -12,7 +12,6 @@ Esta é uma aplicação de aluguel de carros desenvolvida durante o bootcamp ign
    
 # Aprendizado
 - TypeScript
-- Nodejs
 - Autenticação JWT
 - Conceitos de SOLID (injeção de dependencia , responsabilidade única , inversão de controle , abstração , etc..)
 - Testes Unitarios e Integração
