@@ -23,3 +23,4 @@ Esta é uma aplicação de aluguel de carros desenvolvida durante o bootcamp ign
 - NGINX e proxy reverso
 - monitoramento de erros com sentry
 - Segurança (limitar a quantidade de requisições em x segundos com redis)
+- Integração continua CI|CD utilizando workflows do github para automatizar processo de deploy
