@@ -20,6 +20,7 @@ Esta é uma aplicação de aluguel de carros desenvolvida durante o bootcamp ign
 - Docker e Docker compose
 - Utilização de ORMs ( no caso do projeto foi utilizado o Type ORM)
 - Configuração de dominio (Email e aplicação)
+- Middlewares
 - NGINX e proxy reverso
 - monitoramento de erros com sentry
 - Segurança (limitar a quantidade de requisições em x segundos com redis)
