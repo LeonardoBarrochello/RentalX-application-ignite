@@ -8,6 +8,7 @@ Esta é uma aplicação de aluguel de carros desenvolvida durante o bootcamp ign
 - Envio de email para reset de senha
 - upload de imagens e avatar
 - alugar carros
+- criação de carros para serem alugados (somente usuario admin)
 - consultar carros disponiveis e carros alugados pela sua conta.
    
 # Aprendizado
